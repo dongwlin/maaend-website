@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: var(--font-space-grotesk), sans-serif;
+  --font-syne: var(--font-syne), sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
+  --font-body: var(--font-dm-sans), sans-serif;
+
+  /* Sci-Fi Industrial Palette */
+  --color-deep-void: #050505;
+  --color-industrial-yellow: #ffd000; /* Warmer, heavy-industry yellow */
+  --color-tech-cyan: #00f0ff; /* Cybernetic/Holographic blue */
+  --color-technical-grey: #27272a;
+  --color-warning-red: #ff3333;
+}
+
+@layer base {
+  body {
+    /* Darker, slightly blue-tinted void */
+    background: radial-gradient(
+      circle at 50% 0%,
+      #0a0a0c 0%,
+      #050505 60%,
+      #000000 100%
+    );
+    background-attachment: fixed;
+    color: #ffffff;
+    font-family: var(--font-body);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .neon-border-yellow {
+    box-shadow:
+      0 0 10px var(--color-industrial-yellow),
+      inset 0 0 5px var(--color-industrial-yellow);
+  }
+
+  .neon-border-cyan {
+    box-shadow:
+      0 0 10px var(--color-tech-cyan),
+      inset 0 0 5px var(--color-tech-cyan);
+  }
+
+  .text-glow-yellow {
+    text-shadow: 0 0 15px rgba(255, 208, 0, 0.6);
+  }
+
+  .text-glow-cyan {
+    text-shadow: 0 0 15px rgba(0, 240, 255, 0.6);
+  }
+
+  .cyber-gradient-text {
+    /* Yellow to Cyan gradient */
+    background: linear-gradient(to right, #ffd000, #00f0ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .stroke-text {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
+    color: transparent;
+  }
+
+  .bg-300\% {
+    background-size: 300% 300%;
+  }
+
+  .clip-path-slant {
+    clip-path: polygon(
+      10px 0,
+      100% 0,
+      100% calc(100% - 10px),
+      calc(100% - 10px) 100%,
+      0 100%,
+      0 10px
+    );
+  }
+}

@@ -1,0 +1,27 @@
+# 依赖
+node_modules
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# 构建输出
+.next
+out
+build
+dist
+coverage
+
+# 配置文件
+*.config.js
+*.config.mjs
+*.config.ts
+
+# 其他
+.git
+.husky
+.vscode
+*.log
+*.md
+public
+
+
