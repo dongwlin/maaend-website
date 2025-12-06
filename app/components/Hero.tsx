@@ -17,10 +17,12 @@ import {
   X,
 } from "lucide-react";
 import { useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 import InteractiveModel from "./InteractiveModel";
 
 export default function Hero() {
+  const { t } = useTranslation();
   const containerRef = useRef<HTMLDivElement>(null);
   const [showDownloadOptions, setShowDownloadOptions] = useState(false);
 
@@ -52,7 +54,7 @@ export default function Hero() {
         {/* HUD Elements */}
         <div className="absolute top-24 left-8 flex items-center gap-2 font-mono text-[10px] text-[#00F0FF]/60">
           <div className="h-2 w-2 animate-pulse bg-[#00F0FF]" />
-          <span>SYSTEM.READY</span>
+          <span>{t("hero.systemReady")}</span>
         </div>
         <div className="absolute top-24 right-8 font-mono text-[10px] text-white/30">
           ID: MaaEnd-V5-RELEASE
@@ -75,7 +77,7 @@ export default function Hero() {
           >
             <TerminalIcon size={12} className="text-[#00F0FF]" />
             <span className="font-mono text-xs font-bold tracking-widest text-[#00F0FF]">
-              NEURAL_NETWORK_ONLINE
+              {t("hero.neuralOnline")}
             </span>
           </motion.div>
 
@@ -85,11 +87,11 @@ export default function Hero() {
           >
             <div className="text-[3rem] leading-[0.9] tracking-tighter md:text-[4rem] lg:text-[5rem]">
               <span className="block bg-gradient-to-r from-[#FFD000] to-white bg-clip-text text-transparent">
-                MaaEnd
+                {t("hero.title")}
               </span>
-              <span className="block text-white">MAA - 终</span>
+              <span className="block text-white">{t("hero.subtitle")}</span>
               <span className="mt-2 block font-mono text-[2.5rem] tracking-normal text-[#00F0FF] md:text-[3.5rem] lg:text-[4.5rem]">
-                终末地小助手
+                {t("hero.description")}
               </span>
             </div>
 
@@ -109,10 +111,9 @@ export default function Hero() {
               <Shield size={20} />
             </div>
             <p className="text-lg leading-relaxed font-light text-white/70">
-              High-precision automation assistant. Designed for heavy-duty
-              operations and maximum efficiency in Arknights: Endfield.
+              {t("hero.tagline")}
               <span className="mt-2 block font-mono text-xs text-[#00F0FF]/60">
-                [ STATUS: OPTIMIZED FOR PRODUCTION ]
+                {t("hero.status")}
               </span>
             </p>
           </motion.div>
@@ -143,15 +144,16 @@ export default function Hero() {
                     onClick={() => setShowDownloadOptions(true)}
                   >
                     <span className="relative z-10 flex items-center gap-3">
-                      INITIALIZE_CORE <ArrowRight size={20} strokeWidth={3} />
+                      {t("hero.initCore")}{" "}
+                      <ArrowRight size={20} strokeWidth={3} />
                     </span>
                     {/* Warning Stripes on Hover */}
                     <div className="absolute inset-0 bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,#00000010_10px,#00000010_20px)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                   </Button>
 
                   <div className="hidden flex-col gap-1 font-mono text-[10px] text-white/30 md:flex">
-                    <span>VER: 5.0.0</span>
-                    <span>BUILD: 114514</span>
+                    <span>{t("hero.version")}: 5.0.0</span>
+                    <span>{t("hero.build")}: 114514</span>
                   </div>
                 </motion.div>
               ) : (
@@ -167,7 +169,7 @@ export default function Hero() {
                       <div className="flex items-center gap-2">
                         <div className="h-2 w-2 bg-[#FFD000]" />
                         <span className="font-mono text-xs text-[#FFD000]">
-                          SELECT_MODULE
+                          {t("hero.selectModule")}
                         </span>
                       </div>
                       <button
@@ -186,7 +188,7 @@ export default function Hero() {
                           size={16}
                           className="mr-2 group-hover:stroke-2"
                         />{" "}
-                        Windows x64
+                        {t("hero.windowsX64")}
                       </Button>
                       <Button
                         variant="outline"
@@ -196,7 +198,7 @@ export default function Hero() {
                           size={16}
                           className="mr-2 group-hover:stroke-2"
                         />{" "}
-                        Windows ARM
+                        {t("hero.windowsArm")}
                       </Button>
                       <Button
                         variant="outline"
@@ -206,7 +208,7 @@ export default function Hero() {
                           size={16}
                           className="mr-2 group-hover:stroke-2"
                         />{" "}
-                        Android
+                        {t("hero.android")}
                       </Button>
                       <Button
                         variant="outline"
@@ -216,7 +218,7 @@ export default function Hero() {
                           size={16}
                           className="mr-2 group-hover:stroke-2"
                         />{" "}
-                        macOS
+                        {t("hero.macos")}
                       </Button>
                     </div>
                   </div>

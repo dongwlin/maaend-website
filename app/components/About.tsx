@@ -2,20 +2,27 @@
 
 import { motion } from "framer-motion";
 import { Activity, GitBranch, Layers } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function About() {
+  const { t } = useTranslation();
+
   const stats = [
     {
-      label: "GitHub Stars",
+      label: t("about.stats.githubStars"),
       value: "30k+",
       icon: <GitBranch className="h-5 w-5" />,
     },
     {
-      label: "Daily Users",
+      label: t("about.stats.dailyUsers"),
       value: "100k+",
       icon: <Activity className="h-5 w-5" />,
     },
-    { label: "Modules", value: "50+", icon: <Layers className="h-5 w-5" /> },
+    {
+      label: t("about.stats.modules"),
+      value: "50+",
+      icon: <Layers className="h-5 w-5" />,
+    },
   ];
 
   return (
@@ -29,27 +36,18 @@ export default function About() {
             viewport={{ once: true }}
           >
             <span className="mb-4 block font-mono text-sm tracking-widest text-[#FFE600] uppercase">
-              Architecture
+              {t("about.architectureLabel")}
             </span>
             <h2 className="font-heading mb-8 text-5xl leading-tight font-bold md:text-6xl">
-              AI-FIRST <br />
+              {t("about.title1")} <br />
               <span className="bg-gradient-to-r from-white to-white/40 bg-clip-text text-transparent">
-                AUTOMATION SYSTEM
+                {t("about.title2")}
               </span>
             </h2>
 
             <div className="space-y-8 text-lg font-light text-white/70">
-              <p>
-                MaaEnd
-                不仅仅是一个脚本，它是基于下一代图像识别技术的智能自动化平台。
-                通过深度学习模型与即时决策算法，它能够像人类玩家一样思考，但拥有机器般的精确与稳定。
-              </p>
-              <p>
-                开源、安全、透明。MaaEnd
-                由社区驱动，为全球数百万博士提供最可靠的后勤保障。 无论是在
-                Windows 上的高性能模拟器，还是 Android 原生环境，MaaEnd
-                都能提供一致的极致体验。
-              </p>
+              <p>{t("about.paragraph1")}</p>
+              <p>{t("about.paragraph2")}</p>
             </div>
 
             <div className="mt-12 grid grid-cols-3 gap-6 border-t border-white/10 pt-8">
@@ -80,7 +78,7 @@ export default function About() {
             <div className="glass-panel relative z-10 rounded-2xl border border-white/10 p-8">
               <div className="mb-6 flex items-center justify-between border-b border-white/5 pb-4">
                 <span className="font-mono text-xs text-white/50">
-                  SYSTEM_LOGS
+                  {t("about.systemLogs")}
                 </span>
                 <div className="flex gap-2">
                   <div className="h-3 w-3 rounded-full bg-red-500/20" />
@@ -90,15 +88,13 @@ export default function About() {
               </div>
 
               <div className="space-y-2 font-mono text-xs text-[#FFE600]">
-                <p>&gt; Initializing Neural Engine...</p>
-                <p className="text-white/50">
-                  &gt; Loading modules: OCR, Pathfinding, Strategy
-                </p>
-                <p>&gt; Optimizing infrastructure routing...</p>
-                <p className="text-white">&gt; DETECTED: Sanity Full</p>
-                <p>&gt; Executing: Auto_Clear_Stage_1-7</p>
-                <p className="text-white/50">&gt; Efficiency gain: +300%</p>
-                <p>&gt; Status: OPERATIONAL</p>
+                <p>{t("about.log1")}</p>
+                <p className="text-white/50">{t("about.log2")}</p>
+                <p>{t("about.log3")}</p>
+                <p className="text-white">{t("about.log4")}</p>
+                <p>{t("about.log5")}</p>
+                <p className="text-white/50">{t("about.log6")}</p>
+                <p>{t("about.log7")}</p>
                 <div className="mt-2 h-4 w-2 animate-pulse bg-[#FFE600]" />
               </div>
             </div>

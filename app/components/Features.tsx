@@ -3,53 +3,55 @@
 import { Card } from "./ui/Card";
 import { motion } from "framer-motion";
 import { Cpu, Globe, Layout, Scan, Terminal, Zap } from "lucide-react";
-
-const features = [
-  {
-    title: "智能刷理智",
-    desc: "Auto Sanity & Navigation",
-    detail: "全自动识别关卡，效率最大化路径规划，自动吃药回体。",
-    icon: <Zap className="text-[#FFE600]" size={32} />,
-    col: "md:col-span-2",
-  },
-  {
-    title: "智能基建",
-    desc: "Infrastructure Ops",
-    detail: "自动心情判定，无人机最优策略，全自动排班轮换。",
-    icon: <Layout className="text-white" size={32} />,
-    col: "md:col-span-1",
-  },
-  {
-    title: "公招识别",
-    desc: "OCR + Strategy",
-    detail: "高精度 OCR 识别，自动计算最优标签组合，不错过任何六星。",
-    icon: <Scan className="text-[#FFE600]" size={32} />,
-    col: "md:col-span-1",
-  },
-  {
-    title: "核心引擎",
-    desc: "Neural Core",
-    detail: "基于深度学习的图像识别引擎，跨平台支持，毫秒级响应。",
-    icon: <Cpu className="text-white" size={32} />,
-    col: "md:col-span-2",
-  },
-  {
-    title: "CLI / API",
-    desc: "Developer Ready",
-    detail: "提供完整的 API 接口与命令行工具，轻松集成到你的工作流。",
-    icon: <Terminal className="text-[#FFE600]" size={32} />,
-    col: "md:col-span-1",
-  },
-  {
-    title: "多端适配",
-    desc: "Cross Platform",
-    detail: "Windows, macOS, Linux, Android 全平台支持。",
-    icon: <Globe className="text-white" size={32} />,
-    col: "md:col-span-2",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 export default function Features() {
+  const { t } = useTranslation();
+
+  const features = [
+    {
+      title: t("features.items.autoSanity.title"),
+      desc: t("features.items.autoSanity.desc"),
+      detail: t("features.items.autoSanity.detail"),
+      icon: <Zap className="text-[#FFE600]" size={32} />,
+      col: "md:col-span-2",
+    },
+    {
+      title: t("features.items.infrastructure.title"),
+      desc: t("features.items.infrastructure.desc"),
+      detail: t("features.items.infrastructure.detail"),
+      icon: <Layout className="text-white" size={32} />,
+      col: "md:col-span-1",
+    },
+    {
+      title: t("features.items.recruitment.title"),
+      desc: t("features.items.recruitment.desc"),
+      detail: t("features.items.recruitment.detail"),
+      icon: <Scan className="text-[#FFE600]" size={32} />,
+      col: "md:col-span-1",
+    },
+    {
+      title: t("features.items.coreEngine.title"),
+      desc: t("features.items.coreEngine.desc"),
+      detail: t("features.items.coreEngine.detail"),
+      icon: <Cpu className="text-white" size={32} />,
+      col: "md:col-span-2",
+    },
+    {
+      title: t("features.items.cliApi.title"),
+      desc: t("features.items.cliApi.desc"),
+      detail: t("features.items.cliApi.detail"),
+      icon: <Terminal className="text-[#FFE600]" size={32} />,
+      col: "md:col-span-1",
+    },
+    {
+      title: t("features.items.crossPlatform.title"),
+      desc: t("features.items.crossPlatform.desc"),
+      detail: t("features.items.crossPlatform.detail"),
+      icon: <Globe className="text-white" size={32} />,
+      col: "md:col-span-2",
+    },
+  ];
   return (
     <section className="relative z-10 px-6 py-20">
       <div className="container mx-auto max-w-6xl">
@@ -61,7 +63,7 @@ export default function Features() {
           className="mb-16"
         >
           <h2 className="font-heading mb-4 text-4xl font-bold md:text-6xl">
-            CORE MODULES
+            {t("features.title")}
           </h2>
           <div className="h-1 w-20 rounded-full bg-[#FFE600]" />
         </motion.div>

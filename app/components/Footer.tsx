@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="relative overflow-hidden border-t border-white/5 bg-[#030305] py-20">
       {/* Marquee */}
@@ -17,7 +20,7 @@ export default function Footer() {
               key={i}
               className="font-syne stroke-text cyber-gradient-text text-[8vw] font-bold text-transparent opacity-30 transition-opacity duration-300 hover:opacity-100"
             >
-              LET&apos;S AUTOMATE THE FUTURE OF ARKNIGHTS
+              {t("footer.marquee")}
             </span>
           ))}
         </motion.div>
@@ -26,47 +29,46 @@ export default function Footer() {
       <div className="container mx-auto grid grid-cols-1 gap-12 px-6 md:grid-cols-4">
         <div className="col-span-2">
           <h3 className="font-heading mb-4 text-2xl">MaaEnd</h3>
-          <p className="max-w-sm text-white/50">
-            An advanced AI automation assistant for Endfield. Open source,
-            secure, and highly efficient.
-          </p>
+          <p className="max-w-sm text-white/50">{t("footer.description")}</p>
         </div>
         <div>
-          <h4 className="mb-4 font-mono text-[#FFE600]">RESOURCES</h4>
+          <h4 className="mb-4 font-mono text-[#FFE600]">
+            {t("footer.resources")}
+          </h4>
           <ul className="space-y-2 text-sm text-white/70">
             <li>
               <a href="#" className="transition-colors hover:text-[#FFE600]">
-                Documentation
+                {t("footer.documentation")}
               </a>
             </li>
             <li>
               <a href="#" className="transition-colors hover:text-[#FFE600]">
-                API Reference
+                {t("footer.apiReference")}
               </a>
             </li>
             <li>
               <a href="#" className="transition-colors hover:text-[#FFE600]">
-                Community Guide
+                {t("footer.communityGuide")}
               </a>
             </li>
           </ul>
         </div>
         <div>
-          <h4 className="mb-4 font-mono text-white">PROJECT</h4>
+          <h4 className="mb-4 font-mono text-white">{t("footer.project")}</h4>
           <ul className="space-y-2 text-sm text-white/70">
             <li>
               <a href="#" className="transition-colors hover:text-[#FFE600]">
-                GitHub
+                {t("footer.github")}
               </a>
             </li>
             <li>
               <a href="#" className="transition-colors hover:text-[#FFE600]">
-                Releases
+                {t("footer.releases")}
               </a>
             </li>
             <li>
               <a href="#" className="transition-colors hover:text-[#FFE600]">
-                Issues
+                {t("footer.issues")}
               </a>
             </li>
           </ul>
@@ -74,7 +76,7 @@ export default function Footer() {
       </div>
 
       <div className="mt-20 text-center font-mono text-xs text-white/20">
-        © {new Date().getFullYear()} MaaEnd TEAM. OPEN SOURCE UNDER AGPL-3.0.
+        © {new Date().getFullYear()} {t("footer.copyright")}
       </div>
     </footer>
   );

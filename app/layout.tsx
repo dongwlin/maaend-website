@@ -3,6 +3,7 @@
 import { DM_Sans, JetBrains_Mono, Space_Grotesk, Syne } from "next/font/google";
 import { useEffect } from "react";
 import "./globals.css";
+import "../i18n";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",

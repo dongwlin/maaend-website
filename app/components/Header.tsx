@@ -4,8 +4,16 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Book, Github, Languages, Moon } from "lucide-react";
 import { Button } from "./ui/Button";
+import { useTranslation } from "react-i18next";
 
 export default function Header() {
+  const { t, i18n } = useTranslation();
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === "zh" ? "en" : "zh";
+    i18n.changeLanguage(newLang);
+  };
+
   return (
     <motion.header
       initial={{ y: -100, opacity: 0 }}
@@ -24,19 +32,21 @@ export default function Header() {
           href="https://github.com/MaaEnd/MaaEnd"
           className="flex items-center gap-2 font-mono text-sm transition-colors hover:text-[#FFE600]"
         >
-          <Github size={16} /> GITHUB
+          <Github size={16} /> {t("header.github")}
         </Link>
         <Link
           href="#"
           className="mr-4 flex items-center gap-2 font-mono text-sm transition-colors hover:text-[#FFE600]"
         >
-          <Book size={16} /> DOCS
+          <Book size={16} /> {t("header.docs")}
         </Link>
 
         <div className="flex items-center gap-2 border-l border-white/10 pl-6">
           <Button
             variant="outline"
             className="h-9 w-9 rounded-full border-white/10 p-0 hover:border-[#FFE600] hover:text-[#FFE600]"
+            onClick={toggleLanguage}
+            title={i18n.language === "zh" ? "Switch to English" : "切换到中文"}
           >
             <Languages size={16} />
           </Button>
