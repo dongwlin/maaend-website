@@ -87,9 +87,9 @@ export default function Hero() {
               <span className="block bg-gradient-to-r from-[#FFD000] to-white bg-clip-text text-transparent">
                 MaaEnd
               </span>
-              <span className="block text-white">ASSISTANT</span>
+              <span className="block text-white">MAA - 终</span>
               <span className="mt-2 block font-mono text-[2.5rem] tracking-normal text-[#00F0FF] md:text-[3.5rem] lg:text-[4.5rem]">
-                ARKNIGHTS ENDFIELD
+                终末地小助手
               </span>
             </div>
 

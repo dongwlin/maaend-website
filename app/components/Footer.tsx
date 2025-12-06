@@ -25,7 +25,7 @@ export default function Footer() {
 
       <div className="container mx-auto grid grid-cols-1 gap-12 px-6 md:grid-cols-4">
         <div className="col-span-2">
-          <h3 className="font-heading mb-4 text-2xl">MaeAssistantEndfield</h3>
+          <h3 className="font-heading mb-4 text-2xl">MaaEnd</h3>
           <p className="max-w-sm text-white/50">
             An advanced AI automation assistant for Endfield. Open source,
             secure, and highly efficient.

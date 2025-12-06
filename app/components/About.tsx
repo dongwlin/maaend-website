@@ -40,14 +40,14 @@ export default function About() {
 
             <div className="space-y-8 text-lg font-light text-white/70">
               <p>
-                MAE
+                MaaEnd
                 不仅仅是一个脚本，它是基于下一代图像识别技术的智能自动化平台。
                 通过深度学习模型与即时决策算法，它能够像人类玩家一样思考，但拥有机器般的精确与稳定。
               </p>
               <p>
-                开源、安全、透明。MAE
+                开源、安全、透明。MaaEnd
                 由社区驱动，为全球数百万博士提供最可靠的后勤保障。 无论是在
-                Windows 上的高性能模拟器，还是 Android 原生环境，MAE
+                Windows 上的高性能模拟器，还是 Android 原生环境，MaaEnd
                 都能提供一致的极致体验。
               </p>
             </div>
