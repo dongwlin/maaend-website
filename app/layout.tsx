@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   useEffect(() => {
-    document.title = "MaaeAssistantArknightsEndfield - Intelligent Automation";
+    document.title = "MaaEnd - Intelligent Automation";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(

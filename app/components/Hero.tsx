@@ -55,12 +55,12 @@ export default function Hero() {
           <span>SYSTEM.READY</span>
         </div>
         <div className="absolute top-24 right-8 font-mono text-[10px] text-white/30">
-          ID: MAAE-V5-RELEASE
+          ID: MaaEnd-V5-RELEASE
         </div>
 
         {/* Large Watermark */}
         <div className="pointer-events-none absolute top-1/2 left-1/2 z-0 -translate-x-1/2 -translate-y-1/2 text-[10vw] font-black whitespace-nowrap text-white/[0.02]">
-          MAAE
+          MaaEnd
         </div>
       </div>
 
@@ -85,7 +85,7 @@ export default function Hero() {
           >
             <div className="text-[3rem] leading-[0.9] tracking-tighter md:text-[4rem] lg:text-[5rem]">
               <span className="block bg-gradient-to-r from-[#FFD000] to-white bg-clip-text text-transparent">
-                MAAE
+                MaaEnd
               </span>
               <span className="block text-white">ASSISTANT</span>
               <span className="mt-2 block font-mono text-[2.5rem] tracking-normal text-[#00F0FF] md:text-[3.5rem] lg:text-[4.5rem]">

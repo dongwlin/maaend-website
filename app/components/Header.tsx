@@ -15,13 +15,13 @@ export default function Header() {
     >
       <div className="flex items-center gap-4">
         <span className="font-heading text-xl font-bold tracking-tight text-white">
-          MaaeAssistantArknightsEndfield
+          MaaEnd
         </span>
       </div>
 
       <nav className="hidden items-center gap-6 md:flex">
         <Link
-          href="https://github.com/MaaAssistantArknights/MaaAssistantArknights"
+          href="https://github.com/MaaEnd/MaaEnd"
           className="flex items-center gap-2 font-mono text-sm transition-colors hover:text-[#FFE600]"
         >
           <Github size={16} /> GITHUB

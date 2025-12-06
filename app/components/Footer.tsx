@@ -74,7 +74,7 @@ export default function Footer() {
       </div>
 
       <div className="mt-20 text-center font-mono text-xs text-white/20">
-        © {new Date().getFullYear()} MAA TEAM. OPEN SOURCE UNDER AGPL-3.0.
+        © {new Date().getFullYear()} MaaEnd TEAM. OPEN SOURCE UNDER AGPL-3.0.
       </div>
     </footer>
   );
