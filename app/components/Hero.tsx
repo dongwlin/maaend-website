@@ -13,6 +13,7 @@ import {
   Monitor,
   Shield,
   Smartphone,
+  Server,
   Terminal as TerminalIcon,
   X,
 } from "lucide-react";
@@ -188,27 +189,7 @@ export default function Hero() {
                           size={16}
                           className="mr-2 group-hover:stroke-2"
                         />{" "}
-                        {t("hero.windowsX64")}
-                      </Button>
-                      <Button
-                        variant="outline"
-                        className="group h-12 justify-start border-white/10 hover:bg-[#FFD000] hover:text-black"
-                      >
-                        <Monitor
-                          size={16}
-                          className="mr-2 group-hover:stroke-2"
-                        />{" "}
-                        {t("hero.windowsArm")}
-                      </Button>
-                      <Button
-                        variant="outline"
-                        className="group h-12 justify-start border-white/10 hover:bg-[#FFD000] hover:text-black"
-                      >
-                        <Smartphone
-                          size={16}
-                          className="mr-2 group-hover:stroke-2"
-                        />{" "}
-                        {t("hero.android")}
+                        {t("hero.windows")}
                       </Button>
                       <Button
                         variant="outline"
@@ -219,6 +200,26 @@ export default function Hero() {
                           className="mr-2 group-hover:stroke-2"
                         />{" "}
                         {t("hero.macos")}
+                      </Button>
+                      <Button
+                        variant="outline"
+                        className="group h-12 justify-start border-white/10 hover:bg-[#FFD000] hover:text-black"
+                      >
+                        <Server
+                          size={16}
+                          className="mr-2 group-hover:stroke-2"
+                        />{" "}
+                        {t("hero.linux")}
+                      </Button>
+                      <Button
+                        variant="outline"
+                        className="group h-12 justify-start border-white/10 hover:bg-[#FFD000] hover:text-black"
+                      >
+                        <Smartphone
+                          size={16}
+                          className="mr-2 group-hover:stroke-2"
+                        />{" "}
+                        {t("hero.android")}
                       </Button>
                     </div>
                   </div>

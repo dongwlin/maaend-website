@@ -15,10 +15,10 @@
     "version": "版本",
     "build": "构建",
     "selectModule": "选择模块",
-    "windowsX64": "Windows x64",
-    "windowsArm": "Windows ARM",
-    "android": "Android",
-    "macos": "macOS"
+    "windows": "Windows",
+    "linux": "Linux",
+    "macos": "macOS",
+    "android": "Android"
   },
   "features": {
     "title": "核心模块",

@@ -15,10 +15,10 @@
     "version": "VER",
     "build": "BUILD",
     "selectModule": "SELECT_MODULE",
-    "windowsX64": "Windows x64",
-    "windowsArm": "Windows ARM",
-    "android": "Android",
-    "macos": "macOS"
+    "windows": "Windows",
+    "linux": "Linux",
+    "macos": "macOS",
+    "android": "Android"
   },
   "features": {
     "title": "CORE MODULES",
